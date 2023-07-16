@@ -3,14 +3,49 @@
 <head>
     <title>check prime</title>
     <style>
-    form 
+    body 
     {
-      font-size: 200%; /* Set the font size to 16 pixels */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
     
-    form input[type="text"] ,form input[type="button"]
+    form 
     {
-      font-size: 110%; /* Set the font size to 14 pixels for text input fields within the form */
+      font-size: 200%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    
+    form input
+    {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    form input[type="submit"],
+    form input[type="button"] 
+    {
+      font-size: 110%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    
+    form input[type="submit"]:hover,
+    form input[type="button"]:hover 
+    {
+      background-color: #45a049;
     }
   </style>
     <script>
