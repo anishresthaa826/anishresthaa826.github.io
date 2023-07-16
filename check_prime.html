@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>check prime</title>
+    <style>
+    body 
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    form 
+    {
+      font-size: 200%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    
+    form input
+    {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size:150%;
+    }
+    
+    form input[type="button"] 
+    {
+      font-size: 110%;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    
+    form input[type="submit"]:hover,
+    form input[type="button"]:hover 
+    {
+      background-color: #45a049;
+    }
+  </style>
+    <script>
+        function prime(){
+            var n,i,flag=true;
+            n = document.myform.n.value;
+            n = parseInt(n);
+            for(i=2;i<=n-1;i++)
+            if(n%i == 0){
+                flag = false;
+                break;
+            }
+            if(flag==false)
+            alert(n+ " is not prime");
+            else
+            alert(n + " is prime");
+        }
+    </script>
+</head>
+<body>
+        <form font-size=90% name="myform">
+            <h3>Enter a number:</h3>
+            <input type="text" name="n" value=""/>
+            <br/><br/>
+            <input type="button" value="Click me to check Prime or not" onclick="prime()">
+        </form>
+</body>
+</html>
